@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    
+    <%= render 'users/userinfo',user: @user,movie: @movie_new %>
+    
+    <div class="col-md-8 offset-md-1">
+      <h2>movie detail</h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>
+              <%= link_to user_path(@movie.user.id) do %>
+              <%= @movie.user.name %>
+              <% end %>
+            </td>
+            <td><%= link_to @movie.title, movie_path(@movie) %></td>
+            <td><%= @movie.body %></td>
+            
+            <% if @movie.favorited_by?(current_user)%> 
+            <td>
+              <%= link_to movie_favorites_path(@movie),method: :delete do %>
+              <i class = "fas fa-kiss-wink-heart"></i><%= @movie.favorites.count %> 
+              <% end %>
+            </td>
+            <% else %>
+            <td>
+              <%= link_to movie_favorites_path(@movie),method: :post do %>
+              <i class = "far fa-kiss-wink-heart"></i><%= @movie.favorites.count %> 
+              <% end %>
+            </td>
+            <% end %>
+            
+            <td>コメント数: <%= @movie.movie_comments.count %></td>
+            
+            <% if current_user.id == @movie.user_id %>
+              <td>
+                <%=link_to "Edit", edit_movie_path(@movie.id),class: "btn btn-sm btn-success" %>
+              </td>
+              <td>
+                <%= link_to "Destroy" ,movie_path(@movie.id),method: :delete, class: "btn btn-sm btn-danger","data-confirm" => "本当に削除しますか？" %>
+              </td>
+            <% end %>
+          </tr>
+        </tbody>
+      </table>
+      
+      <% @movie.movie_comments.each do |movie_comment| %>
+        <table>
+          <tbody>
+            <td>
+              <%= link_to user_path(movie_comment.user.id) do %>
+                <%= movie_comment.user.name %>
+              <% end %>
+            </td>
+            <td>
+              <%= movie_comment.comment %>
+            </td>
+            <td>
+              <% if movie_comment.user == current_user %>
+                <%= link_to "Destroy", movie_movie_comment_path(movie_comment.movie_id,movie_comment), method: :delete, class: "btn btn-sm btn-danger" %>
+              <% end %>
+            </td>
+          </tbody>
+        </table>
+      <% end %>
+      
+      
+      <div>
+        <%= form_with(model:[@movie,@movie_comment],local: true) do |f| %>
+        <div class="form-group">
+          <%= f.text_area :comment, size: "100x6" %>
+        </div>
+        <div>
+          <%= f.submit "送信" %>
+        </div>
+        <% end %>
+      </div>
+      
+    </div>
+    
+    
+  </div>
+</div>
