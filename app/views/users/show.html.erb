@@ -24,8 +24,8 @@
             <% end %>
             </td>
             <td><%= link_to movie.title, movie_path(movie.id) %></td>
-            <td><%= movie.body %></td>
-            <td>コメント数: <%= movie.movie_comments.count %></td>
+            <td class="fix-body"><%= movie.body %></td>
+            <td class="fix-tb">コメント数: <%= movie.movie_comments.count %></td>
           </tr>
         <% end %>
         </tbody>

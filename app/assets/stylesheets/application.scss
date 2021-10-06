@@ -24,3 +24,14 @@
   margin: 40px 10px 10px 550px;
 }
 
+.table {
+  // table-layout: fixed;
+}
+
+.fix-tb {
+  white-space: nowrap;
+}
+
+.fix-body {
+  word-break : break-all;
+}
