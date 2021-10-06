@@ -1,24 +1,47 @@
-# README
+# movies
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL
+https://myapp-favorite-movies.herokuapp.com/
 
-Things you may want to cover:
+## 概要
+moviesは映画の感想を共有するサイトです。みんながオススメする映画を簡単に調べることができます。
+いいね機能やコメント機能があることでユーザーのリアクションを見ることができます。
 
-* Ruby version
+## 使用言語・技術
+- Ruby2.6.3
+- Rails5.2.6
+- slim
+- jQuery
+- Bootstrap4
+- MySQL
+- AWS
 
-* System dependencies
+## moviesについて
+### 作成した理由
+映画鑑賞が好きなのでもっと良い映画を知りたいと思い他人がオススメする映画一覧を作りたいと考えた。
 
-* Configuration
+### 今後の展開
+映画だけでなく他のジャンルでも作りたい。
+使いやすさを重要視し、コーディングをしていきたい。
 
-* Database creation
+## 機能一覧
+### ユーザー認証
+- ログイン、サインアップ機能(devise)
+  - ユーザー名、email、パスワードで登録(ログイン時はemailとパスワードのみ)
+### 投稿機能
+- CRUD機能
+- いいね機能
+- コメント機能
+### お問い合わせ機能
+-環境変数
 
-* Database initialization
+## 注力した点
+シンプルを重要視していたので、どの機能を付け加えるか悩みました。
+ほぼ初めてWEBアプリケーションを作ったのでこのサイトを使って頂いた方からフィードバックが欲しいと思いました。
+そのため、お問い合わせ機能を追加し、その意見をもとに使いやすい機能を追加しさらなるパフォーマンスの向上を目指したいです。
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 使い方
+topページでログインしてください。
+ログインに必要なemailとパスワードは下記のものをお使いください
+email:guest4649@zmail.com
+password:g12345
