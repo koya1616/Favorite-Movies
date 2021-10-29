@@ -2,6 +2,9 @@
 
 ## URL
 https://myapp-favorite-movies.herokuapp.com/
+### ゲストログイン
+-email:guest4649@zmail.com
+-password:g12345
 
 ## 概要
 moviesは映画の感想を共有するサイトです。みんながオススメする映画を簡単に調べることができます。
@@ -14,7 +17,8 @@ moviesは映画の感想を共有するサイトです。みんながオスス�
 - jQuery
 - Bootstrap4
 - MySQL
-- AWS
+- AWS(cloud9)
+- Heroku
 
 ## moviesについて
 ### 作成した理由
@@ -39,8 +43,3 @@ moviesは映画の感想を共有するサイトです。みんながオスス�
 ほぼ初めてWEBアプリケーションを作ったのでこのサイトを使って頂いた方からフィードバックが欲しいと思いました。
 そのため、お問い合わせ機能を追加し、その意見をもとに使いやすい機能を追加しさらなるパフォーマンスの向上を目指したいです。
 
-## 使い方
-topページでログインしてください。
-ログインに必要なemailとパスワードは下記のものをお使いください
-email:guest4649@zmail.com
-password:g12345
