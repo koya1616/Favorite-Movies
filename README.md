@@ -1,4 +1,6 @@
 # movies
+![S__29892630](https://user-images.githubusercontent.com/87183507/139368342-caba3a82-358b-4c47-a1f6-134f8179f22b.jpg)
+
 
 ## URL
 https://myapp-favorite-movies.herokuapp.com/
