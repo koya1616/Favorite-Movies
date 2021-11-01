@@ -5,8 +5,8 @@
 ## URL
 https://myapp-favorite-movies.herokuapp.com/
 ### ゲストログイン
--email:guest4649@zmail.com
--password:g12345
+- email:guest4649@zmail.com
+- password:g12345
 
 ## 概要
 moviesは映画の感想を共有するサイトです。みんながオススメする映画を簡単に調べることができます。
