@@ -15,9 +15,8 @@ moviesは映画の感想を共有するサイトです。みんながオスス�
 ## 使用言語・技術
 - Ruby2.6.3
 - Rails5.2.6
-- slim
 - jQuery
-- Bootstrap4
+- Bootstrap
 - MySQL
 - AWS(cloud9)
 - Heroku
